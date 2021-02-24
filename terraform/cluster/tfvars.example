@@ -1,0 +1,8 @@
+project                    = "my-project-1"
+cluster_location           = "us-central1-a"
+region                     = "us-central1"
+network                    = "gke-network-1"
+subnetwork                 = "gke-subnet-1"
+ip_range_pods              = "ip-range-pods"
+ip_range_services          = "ip-range-scv"
+add_cluster_firewall_rules = false #Change to true after first run
