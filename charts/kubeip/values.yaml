@@ -1,6 +1,6 @@
 nodes:
   self: silvester-nodepool-apps
-  ingress: silvester-nodepool-ingress
+  ingress: ingress-pool
 
 
 gsaServiceAccount: kubeip-serviceaccount

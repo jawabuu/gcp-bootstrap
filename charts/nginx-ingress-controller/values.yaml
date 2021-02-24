@@ -2,12 +2,12 @@ controller:
   kind: DaemonSet
   replicaCount: 1
   nodeSelector:
-    cloud.google.com/gke-nodepool: silvester-nodepool-ingress
+    cloud.google.com/gke-nodepool: ingress-pool
 
   admissionWebhooks:
     patch:
       nodeSelector:
-        cloud.google.com/gke-nodepool: silvester-nodepool-ingress
+        cloud.google.com/gke-nodepool: ingress-pool
       tolerations: 
       - key: dedicated
         operator: Equal
@@ -37,7 +37,7 @@ controller:
 
 defaultBackend:
   nodeSelector:  
-    cloud.google.com/gke-nodepool: silvester-nodepool-ingress
+    cloud.google.com/gke-nodepool: ingress-pool
   tolerations:
   - key: dedicated
     operator: Equal

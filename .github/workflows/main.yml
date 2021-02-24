@@ -50,11 +50,11 @@ jobs:
       continue-on-error: true
 
     - name: "CLUSTER - Terraform - Import - Ingress Node Pool"
-      run: terraform -chdir=./terraform/cluster import google_container_node_pool.silvester_nodepool_ingress $GCP_LOCATION/$GKE_CLUSTER_NAME/silvester-nodepool-ingress 
+      run: terraform -chdir=./terraform/cluster import google_container_node_pool.silvester_nodepool_ingress $GCP_LOCATION/$GKE_CLUSTER_NAME/ingress-pool 
       continue-on-error: true
 
     - name: "CLUSTER - Terraform - Import - Apps Node Pool"
-      run: terraform -chdir=./terraform/cluster import google_container_node_pool.silvester_nodepool_apps $GCP_LOCATION/$GKE_CLUSTER_NAME/silvester-nodepool-apps 
+      run: terraform -chdir=./terraform/cluster import google_container_node_pool.web-pool $GCP_LOCATION/$GKE_CLUSTER_NAME/silvester-nodepool-apps 
       continue-on-error: true
 
     - name: "CLUSTER - Terraform - Import - HTTP Traffic"
